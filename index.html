@@ -1,1 +1,94 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MediaGrab - a simple media link checker for authorized video and audio sources.">
+  <title>MediaGrab | Video & Audio Tools</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./">
+      <span class="brand-icon">↓</span>
+      MediaGrab
+    </a>
+    <span class="status">Free Media Tool</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">YOUR MEDIA WORKSPACE</span>
+      <h1>Save your favourite <span>media.</span></h1>
+      <p>Check media links and work with videos or audio you own
+         or have permission to download.</p>
+
+      <div class="download-card">
+        <label for="mediaUrl">Paste a media URL</label>
+        <input id="mediaUrl" type="url"
+          placeholder="https://example.com/video"
+          autocomplete="url">
+
+        <label for="platform">Choose platform</label>
+        <select id="platform">
+          <option value="auto">Detect automatically</option>
+          <option value="youtube">YouTube</option>
+          <option value="instagram">Instagram</option>
+          <option value="facebook">Facebook</option>
+          <option value="other">Other website</option>
+        </select>
+
+        <div class="format-options">
+          <label class="format-option">
+            <input type="radio" name="format" value="video" checked>
+            <span>▣ Video</span>
+          </label>
+          <label class="format-option">
+            <input type="radio" name="format" value="audio">
+            <span>♫ Audio</span>
+          </label>
+        </div>
+
+        <button id="checkBtn" type="button">Check media link →</button>
+        <p id="message" class="message" role="status" aria-live="polite">
+          Your result will appear here.
+        </p>
+        <div id="result" class="result" hidden></div>
+      </div>
+    </section>
+
+    <section class="features">
+      <h2>Simple. Clear. Easy to use.</h2>
+      <div class="feature-grid">
+        <article class="feature">
+          <span>🔗</span>
+          <h3>Link checker</h3>
+          <p>Check URL format and identify supported websites.</p>
+        </article>
+        <article class="feature">
+          <span>🎬</span>
+          <h3>Video tools</h3>
+          <p>Prepare to work with authorized video sources.</p>
+        </article>
+        <article class="feature">
+          <span>🎧</span>
+          <h3>Audio tools</h3>
+          <p>Build audio features for media you may download.</p>
+        </article>
+      </div>
+    </section>
+
+    <p class="notice">
+      Only download media you own or have permission to save.
+      This prototype checks links; it does not download social media
+      videos or extract audio.
+    </p>
+  </main>
+
+  <footer>
+    © <span id="year"></span> MediaGrab · Built as a learning project
+  </footer>
+</body>
+</html>
